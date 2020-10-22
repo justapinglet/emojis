@@ -1,0 +1,22 @@
+﻿body {
+   
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.grid-div {
+    position: center;
+    height: 20px;
+    width: 20px;
+    margin: 30px;
+}
+
+.text {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+}
