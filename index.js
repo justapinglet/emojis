@@ -1,28 +1,20 @@
 ﻿// JavaScript source code
 
-let dashArray = [];
-let gridArray = [];
 let emojis = ['🙃', '😀', '😂', '😁', '😄', '🤑', '😜'];
 
-
-function dashes() {
-  //  document.getElementById("body").style = "overflow: hidden";
+function tilde() {
 
     for (let i = 0; i < 171; i++) {
 
-        gridArray[i] = document.createElement('div');
-        gridArray[i].classList = 'grid-div';
-        document.getElementById("grid").appendChild(gridArray[i]);
+        let div = document.createElement('div');
+        div.classList = 'grid-div';
+        div.innerHTML = '~';
+        document.getElementById("grid").appendChild(div);
 
-        dashArray[i] = document.createElement('p');
-        dashArray[i].classList = 'text';
-        dashArray[i].innerHTML = '~';
-        gridArray[i].appendChild(dashArray[i]);
-
-       gridArray[i].addEventListener("mouseover", function () {
-           let random = Math.floor(Math.random() * emojis.length);
-           let emoji = emojis[random];
-           dashArray[i].innerHTML = emoji;
+        div.addEventListener("mouseover", function () {
+            let random = Math.floor(Math.random() * emojis.length);
+            let emoji = emojis[random];
+            div.innerHTML = emoji;
         });
     }
 }
